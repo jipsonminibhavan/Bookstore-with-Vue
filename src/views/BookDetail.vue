@@ -2,6 +2,7 @@
   <h1>{{ book.title }}</h1>
   <p>{{ book.abstract }}</p>
   <p>{{ book.price }}</p>
+  <p>{{ book.author }}</p>
   <img :src="book.cover" alt="" />
   <a href="/book-list">Back</a>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <nav class="nav justify-content-center">
     <router-link to="/new-book">New Book</router-link>|
     <router-link to="/book-list">Booklist</router-link>|
     <router-link :to="{ name: 'fav-list' }">Favoriten</router-link>|

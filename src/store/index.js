@@ -22,7 +22,7 @@ export default createStore({
   },
   actions: {
     async loadBooks(ctx) {
-      const response = await fetch("http://localhost:4730/books?_limit=10");
+      const response = await fetch("http://localhost:4730/books");
       const booksData = await response.json();
       const result = booksData.map((bookData) => {
         return {

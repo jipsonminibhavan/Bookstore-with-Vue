@@ -10,7 +10,13 @@
     />
   </svg>
 
-  <button @click="$emit('clicked')" :class="{ active: isActive }">❤️</button>
+  <button
+    class="btn btn-light"
+    @click="$emit('clicked')"
+    :class="{ active: isActive }"
+  >
+    👍🏾
+  </button>
 </template>
 <script>
 export default {
