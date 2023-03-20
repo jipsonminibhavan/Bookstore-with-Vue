@@ -3,6 +3,7 @@
     <thead>
       <tr>
         <th>Bookname</th>
+        <th>Author</th>
         <th>ISBN</th>
         <th>&nbsp;</th>
       </tr>
@@ -10,6 +11,7 @@
     <tbody>
       <tr v-for="book of books" :key="book.id">
         <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
         <td>{{ book.isbn }}</td>
         <td>
           <slot>
