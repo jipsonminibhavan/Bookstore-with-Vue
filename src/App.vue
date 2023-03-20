@@ -23,8 +23,8 @@ export default {
 </script>
 <style scoped>
 .header {
-  background-color: rgb(29, 237, 199);
-  color: #fff;
+  background-color: rgb(103, 231, 208);
+  color: hsl(0, 0%, 5%);
   text-align: center;
   margin-bottom: 40px;
 }
