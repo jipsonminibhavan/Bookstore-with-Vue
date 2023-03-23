@@ -3,10 +3,18 @@ import { createStore } from "vuex";
 export default createStore({
   state: {
     books: [],
+    searchquery: "",
   },
   getters: {
     getbooks(state) {
       return state.books;
+    },
+    getfiltredbooks(state) {
+      return state.books.filter((book) =>
+        book.title
+          .toLocaleLowerCase()
+          .includes(state.searchquery.toLocaleLowerCase())
+      );
     },
     getfavbooks(state) {
       return state.books.filter((book) => book.isFav);
@@ -18,6 +26,9 @@ export default createStore({
     },
     ADD_BOOKS(state, book) {
       state.books.push(book);
+    },
+    SET_SEARCHQUERY(state, value) {
+      state.searchquery = value;
     },
   },
   actions: {

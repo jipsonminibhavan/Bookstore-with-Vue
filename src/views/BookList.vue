@@ -1,4 +1,5 @@
 <template>
+  <h1>Booklist</h1>
   <BookTable :books="books" @book-update="toogleFavListEntry" />
 </template>
 
@@ -12,7 +13,7 @@ export default {
     BookTable,
   },
   computed: {
-    ...mapGetters({ books: "getbooks" }),
+    ...mapGetters({ books: "getfiltredbooks" }),
   },
   methods: {
     toogleFavListEntry(book) {

@@ -6,12 +6,12 @@
         <nav class="nav justify-content-center">
           <router-link to="/new-book">New Book</router-link>|
           <router-link to="/book-list">Booklist</router-link>|
-          <router-link :to="{ name: 'fav-list' }">Favoriten</router-link>|
+          <router-link :to="{ name: 'fav-list' }">Favorite</router-link>|
         </nav>
       </div>
     </section>
   </header>
-  <form @submit.prevent="SearchBooks()" class="search-box">
+  <form @submit.prevent="searchBooks" class="search-box">
     <input type="text" placeholder="Search for a book" v-model="search" />
     <input type="submit" value="Search" />
   </form>
@@ -19,6 +19,14 @@
 </template>
 <script>
 export default {
+  data() {
+    return { search: "" };
+  },
+  methods: {
+    searchBooks() {
+      this.$store.commit("SET_SEARCHQUERY", this.search);
+    },
+  },
   async created() {
     await this.$store.dispatch("loadBooks");
   },

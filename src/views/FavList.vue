@@ -1,5 +1,5 @@
 <template>
-  <h1>Favoriten</h1>
+  <h1>Favorite</h1>
   <BookTable :books="favBooks" @book-update="toogleFavListEntry" />
 </template>
 
