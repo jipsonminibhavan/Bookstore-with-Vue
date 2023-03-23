@@ -11,22 +11,11 @@
       </div>
     </section>
   </header>
-  <form @submit.prevent="searchBooks" class="search-box">
-    <input type="text" placeholder="Search for a book" v-model="search" />
-    <input type="submit" value="Search" />
-  </form>
+
   <router-view />
 </template>
 <script>
 export default {
-  data() {
-    return { search: "" };
-  },
-  methods: {
-    searchBooks() {
-      this.$store.commit("SET_SEARCHQUERY", this.search);
-    },
-  },
   async created() {
     await this.$store.dispatch("loadBooks");
   },
@@ -46,13 +35,5 @@ export default {
 }
 .header__section {
   padding: 10px 10px;
-}
-.search-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 10px;
 }
 </style>
