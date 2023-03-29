@@ -1,7 +1,6 @@
 <template>
   <div class="about">
-    <h1>Total Book count: {{ $store.getters.getbooks.length }}</h1>
-    <h2>Add a New Book</h2>
+    <h1>Add a New Book</h1>
     <div class="field">
       <label>Title</label>
       <input v-model="book.title" type="text" placeholder="Add a booktitle" />
@@ -46,19 +45,19 @@
 </template>
 <script>
 export default {
-  methods: {
-    createNewBook() {
-      return {
-        title: "…",
-        subtitle: "…",
-        isbn: "…",
-        abstract: "…",
-        author: "…",
-        publisher: "…",
-        price: "$..",
+  data() {
+    return {
+      book: {
+        title: "",
+        subtitle: "",
+        isbn: "",
+        abstract: "",
+        author: "",
+        publisher: "",
+        price: "$",
         cover: "http://….png",
-      };
-    },
+      },
+    };
   },
 };
 </script>
