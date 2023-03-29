@@ -1,7 +1,7 @@
 <template>
   <SearchBar />
   <h1>Booklist</h1>
-  <p>Total Book count: {{ $store.getters.getbooks.length }}</p>
+  <p>Total book count: {{ $store.getters.getbooks.length }}</p>
 
   <BookTable :books="books" @book-update="toogleFavListEntry" />
 </template>

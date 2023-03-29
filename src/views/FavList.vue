@@ -1,5 +1,6 @@
 <template>
   <h1>Favorite</h1>
+  <p>FavBooks: {{ $store.getters.getfavbooks.length }}</p>
   <BookTable :books="favBooks" @book-update="toogleFavListEntry" />
 </template>
 
