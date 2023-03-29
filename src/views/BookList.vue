@@ -1,8 +1,5 @@
 <template>
-  <form @submit.prevent="searchBooks" class="search-box">
-    <input type="text" placeholder="Search for a book" v-model="search" />
-    <input type="submit" value="Search" />
-  </form>
+  <SearchBar />
   <h1>Booklist</h1>
   <p>Total Book count: {{ $store.getters.getbooks.length }}</p>
 
@@ -11,6 +8,7 @@
 
 <script>
 import BookTable from "@/components/BookTable.vue";
+import SearchBar from "@/components/SearchBar.vue";
 import { mapGetters } from "vuex";
 
 export default {
@@ -20,6 +18,7 @@ export default {
   name: "BookList",
   components: {
     BookTable,
+    SearchBar,
   },
   computed: {
     ...mapGetters({ books: "getfiltredbooks" }),
@@ -27,9 +26,6 @@ export default {
   methods: {
     toogleFavListEntry(book) {
       this.$store.dispatch("toogleFavListEntry", book);
-    },
-    searchBooks() {
-      this.$store.commit("SET_SEARCHQUERY", this.search);
     },
   },
 };
