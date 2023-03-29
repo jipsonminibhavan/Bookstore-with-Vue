@@ -4,6 +4,16 @@ export default createStore({
   state: {
     books: [],
     searchquery: "",
+    book: {
+      title: "",
+      subtitle: "",
+      isbn: "",
+      abstract: "",
+      author: "",
+      publisher: "",
+      price: "$",
+      cover: "http://….png",
+    },
   },
   getters: {
     getbooks(state) {

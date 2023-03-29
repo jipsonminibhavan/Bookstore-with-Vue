@@ -15,14 +15,6 @@ export default {
 };
 </script>
 <style scoped>
-.fav-button {
-  width: 20 px;
-  height: 20px;
-  border: 3px solid transparent;
-  border-radius: 3px;
-  padding: 5px;
-  cursor: pointer;
-}
 .active {
   background-color: salmon;
 }

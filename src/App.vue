@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <section class="header__section">
-      <p class="header__task-name">📚📖 B👀kstore📖📚</p>
+      <p class="header__task-name">📚📖 B👀KSTORE📖📚</p>
       <div>
         <nav class="nav justify-content-center">
           <router-link to="/new-book">New Book</router-link>|
