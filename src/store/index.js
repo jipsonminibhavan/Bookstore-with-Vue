@@ -43,7 +43,7 @@ export default createStore({
   },
   actions: {
     async loadBooks(ctx) {
-      const response = await fetch("http://localhost:4730/books");
+      const response = await fetch(`${process.env.VUE_APP_API_URL}/books`);
       const booksData = await response.json();
       const result = booksData.map((bookData) => {
         return {
@@ -61,7 +61,7 @@ export default createStore({
         isFav: !book.isFav,
       };
 
-      fetch("http://localhost:4730/books/" + book.id, {
+      fetch(`${process.env.VUE_APP_API_URL}/books/${book.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

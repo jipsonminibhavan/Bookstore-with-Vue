@@ -105,7 +105,7 @@ export default {
     addBook(event) {
       event.preventDefault();
 
-      fetch("http://localhost:4730/books/", {
+      fetch(`${process.env.VUE_APP_API_URL}/books`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

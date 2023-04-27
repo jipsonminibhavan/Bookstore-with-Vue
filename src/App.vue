@@ -23,7 +23,7 @@ export default {
 </script>
 <style scoped>
 .header {
-  background-color: rgb(103, 231, 208);
+  background: linear-gradient(to bottom right, #9be15d, #00e3ae);
   color: hsl(0, 0%, 5%);
   text-align: center;
   margin-bottom: 40px;
